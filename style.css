@@ -1,0 +1,312 @@
+/* =================
+   Table of Contents
+
+   1. Global Styles: Global styles for my project.
+   
+   2. HEADER
+
+   3. MAIN
+
+   4. FOOTER
+
+   x.1. Layout: Styles related with layout, e.g. header, nav, main, section, footer, div, etc.
+
+   x.2. Typography: Styles related to text, e.g. h1, h2, p, etc.
+
+   x.3. Assets: Styles related to assets, e.g. images, svg, etc.
+
+   x.4. Components: Styles related to components, e.g. buttons, etc.
+   ================= */
+
+/* =================
+   1. Global Styles
+   ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* Primary */
+  --pink: hsl(322, 100%, 66%);
+  /* Neutral */
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button {
+  padding: 1em 4em;
+  border-radius: 2em;
+  border: none;
+  background-color: var(--pink);
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+/* =============================== 
+   ========== 2. HEADER ========== 
+   =============================== */
+
+/* =================
+   2.1. Layout
+   ================= */
+.header {
+  background-image: url('./images/bg-hero-mobile.svg');
+  background-color: var(--very-pale-cyan);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 2em 4em;
+  width: 100%;
+}
+
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__container-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =================
+   1.2. Typography
+   ================= */
+
+.header__title {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.75rem;
+  color: var(--very-dark-cyan);
+}
+
+.header__sub-title {
+  text-align: center;
+  font-size: 1em;
+  font-size: 0.93rem;
+}
+
+/* =================
+   1.3. Assets
+   ================= */
+
+.header__nav-image {
+  width: 40%;
+  /* max-width: 12rem; */
+  height: 100%;
+}
+
+.header__image {
+  width: 100%;
+  /* max-width: 40rem; */
+  height: 100%;
+}
+
+/* =================
+   1.4. Components
+   ================= */
+
+.button.header__nav-button {
+  padding: 0.5em 2em;
+  background-color: white;
+  color: var(--very-dark-cyan);
+  box-shadow: 0 4px 2px -2px var(--very-dark-cyan);
+}
+
+/* =============================== 
+   ========== 3. MAIN ========== 
+   =============================== */
+
+/* =================
+   3.1. Layout
+   ================= */
+.main {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  padding: 2em;
+  box-shadow: 0px 0px 1px black;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section.section-grow-together {
+  margin-top: 3rem;
+}
+
+.section.section-flowing-conversations {
+  margin: 3rem 0;
+}
+
+.section.section-build-community {
+  padding: 0.5em;
+  background: white;
+  transform: translateY(50%);
+  width: 100%;
+  /* max-width: 30rem; */
+}
+
+/* =================
+   3.2. Typography
+   ================= */
+
+.section__title {
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.section__sub-title {
+  text-align: center;
+  color: var(--grayish-blue);
+  font-size: 0.87rem;
+}
+
+.section__title.section-build-community__title {
+  font-size: 1.1rem;
+}
+
+/* =================
+   3.3. Assets
+   ================= */
+.section__image {
+  width: 100%;
+  /* max-width: 23rem; */
+  height: 100%;
+}
+
+/* =================
+   3.4. Components
+   ================= */
+
+.button.section-build-community__button {
+  margin: 0 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1.75em;
+}
+
+/* =============================== 
+   ========== 4. FOOTER ========== 
+   =============================== */
+
+/* =================
+   4.1. Layout
+   ================= */
+footer {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  padding: 1em;
+  padding-top: 10em;
+  width: 100%;
+}
+
+/* =================
+   4.2. Typography
+   ================= */
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 2em 0;
+}
+
+/* =================
+   4.3. Assets
+   ================= */
+
+.footer__logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+  width: 50%;
+  height: 100%;
+  /* max-width: 10rem; */
+}
+
+.footer__image-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.4em;
+  margin-right: 1.25em;
+}
+
+.footer__social_media_icons {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__svg-social-media-icon {
+  width: 50px;
+  height: 50px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+  border: 1px solid red;
+  border-radius: 10000000px;
+  padding: 0.8em;
+}
+
+/* =================
+   4.4. Components
+   ================= */
+.footer__list-contact-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1em 0;
+}
+
+.footer__list-other-pages {
+  list-style-type: none;
+  margin: 3em 0;
+}
+
+.footer__list-other-pages-item {
+  margin: 1em 0;
+}
+
+@media (min-width: 900px) {
+  /* =============================== 
+     ========== 2. HEADER ========== 
+     =============================== */
+
+  /* =============================== 
+     ========== 3. MAIN ========== 
+     =============================== */
+
+  /* =============================== 
+     ========== 3. FOOTER ========== 
+     =============================== */
+}
